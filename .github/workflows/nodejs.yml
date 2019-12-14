@@ -46,13 +46,13 @@ jobs:
       # env:
       #   CI: true
 
-    - name: 'Run Azure webapp deploy action using publish profile credentials'
+    - name: 'Azure webapp deploy -> CAC'
       uses: azure/webapps-deploy@v1
       with: 
         app-name: oliver-calculator-CAC
         publish-profile: ${{ secrets.AZURE_CRED_CAC }}
 
-    - name: 'Run Azure webapp deploy action using publish profile credentials'
+    - name: 'Azure webapp deploy -> EAS'
       uses: azure/webapps-deploy@v1
       with: 
         app-name: oliver-calculator-EAS
