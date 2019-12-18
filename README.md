@@ -1,5 +1,5 @@
 Workflow status: 
-![](https://github.com/ManulifeOpenSource/oliver-calculator/workflows/Node CI/badge.svg)
+![](https://github.com/ManulifeOpenSource/oliver-calculator/workflows/Node%20CI/badge.svg)
 
 
 Calculator.js: a node.js Demonstration Project
