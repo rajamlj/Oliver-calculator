@@ -52,37 +52,51 @@ jobs:
     #     app-name: oliver-calculator-CAC
     #     publish-profile: ${{ secrets.AZURE_CRED_CAC }}
 
+    # upload-artifact took 8 minutes
     - name: upload artifact
       uses: actions/upload-artifact@master
       with:
         name: my-artifact
         path: .
       
-
-  deploy-CAC:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-
-    - name: download artifact
-      uses: actions/download-artifact@master
-      with:
-        name: my-artifact
-        path: .
-
     - name: 'Azure webapp deploy -> CAC'
       uses: azure/webapps-deploy@v1
       with: 
         app-name: oliver-calculator-CAC
         publish-profile: ${{ secrets.AZURE_CRED_CAC }}
 
-
-  deploy-EAS:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
     - name: 'Azure webapp deploy -> EAS'
       uses: azure/webapps-deploy@v1
       with: 
         app-name: oliver-calculator-EAS
         publish-profile: ${{ secrets.AZURE_CRED_EAS }}
+
+
+  # deploy-CAC:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+
+  #   # download-artifact took 3 minutes
+  #   - name: download artifact
+  #     uses: actions/download-artifact@master
+  #     with:
+  #       name: my-artifact
+  #       path: .
+
+  #   - name: 'Azure webapp deploy -> CAC'
+  #     uses: azure/webapps-deploy@v1
+  #     with: 
+  #       app-name: oliver-calculator-CAC
+  #       publish-profile: ${{ secrets.AZURE_CRED_CAC }}
+
+
+  # deploy-EAS:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #   - name: 'Azure webapp deploy -> EAS'
+  #     uses: azure/webapps-deploy@v1
+  #     with: 
+  #       app-name: oliver-calculator-EAS
+  #       publish-profile: ${{ secrets.AZURE_CRED_EAS }}
