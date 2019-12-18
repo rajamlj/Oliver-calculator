@@ -1,3 +1,7 @@
+Workflow status: 
+https://github.com/ManulifeOpenSource/oliver-calculator/workflows/Node CI/badge.svg
+
+
 Calculator.js: a node.js Demonstration Project
 ==============================================
 An example node.js project, including tests with mocha, that behaves like
