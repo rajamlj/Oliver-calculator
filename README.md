@@ -1,6 +1,6 @@
 Workflow status: 
 
-![](https://github.com/ManulifeOpenSource/oliver-calculator/workflows/Node%20CI/badge.svg?branch=master)
+![](https://github.com/actions/ManulifeOpenSource/oliver-calculator/workflows/Node%20CI/badge.svg?branch=master)
 
 
 Calculator.js: a node.js Demonstration Project
