@@ -1,3 +1,5 @@
+console.log("Server starting");
+
 var express = require('express'),
   app = express(),
   port = 3000;
