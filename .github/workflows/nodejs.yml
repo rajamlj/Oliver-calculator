@@ -53,11 +53,11 @@ jobs:
     #     publish-profile: ${{ secrets.AZURE_CRED_CAC }}
 
     # upload-artifact took 8 minutes
-    - name: upload artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: my-artifact
-        path: .
+    # - name: upload artifact
+    #   uses: actions/upload-artifact@master
+    #   with:
+    #     name: my-artifact
+    #     path: .
       
     - name: 'Azure webapp deploy -> CAC'
       uses: azure/webapps-deploy@v1
