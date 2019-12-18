@@ -43,16 +43,22 @@ jobs:
       # env:
       #   CI: true
 
-      
-  deploy-CAC:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
     - name: 'Azure webapp deploy -> CAC'
       uses: azure/webapps-deploy@v1
       with: 
         app-name: oliver-calculator-CAC
         publish-profile: ${{ secrets.AZURE_CRED_CAC }}
+
+      
+  # deploy-CAC:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #   - name: 'Azure webapp deploy -> CAC'
+  #     uses: azure/webapps-deploy@v1
+  #     with: 
+  #       app-name: oliver-calculator-CAC
+  #       publish-profile: ${{ secrets.AZURE_CRED_CAC }}
 
   deploy-EAS:
     runs-on: ubuntu-latest
